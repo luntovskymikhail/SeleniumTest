@@ -1,24 +1,23 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
-import time
 
 driver = webdriver.Chrome(executable_path="C:\Drivers\operadriver.exe")
-def wait():
-    time.sleep(7)
 
-#open main page
-driver.get("https://www.spbrealty.ru/")
-wait()
+#check radio button
+driver.get("http://www.echoecho.com/htmlforms10.htm")
 
-element = driver.find_element_by_name("NewObjectMailing[email]")
-if element.is_displayed() == True:
-    print("Element is displayed")
+butterradio = driver.find_element_by_css_selector("input[value=Butter]")
+if butterradio.is_selected() == True:
+    print("butter radio is selected")
 else:
-    print("Element is not displayed")
+    print("butter radio is not selected")
 
-if element.is_enabled() == True:
-    print("Element is enabled")
+milkradio = driver.find_element_by_css_selector("input[value=Milk]")
+if milkradio.is_selected() == True:
+    print("milk radio is selected")
 else:
-    print("Element is not enabled")
+    print("milk radio is not selected")
 
-element.send_keys("test@test.ru")
+#result
+#butter radio is selected
+#milk radio is not selected
