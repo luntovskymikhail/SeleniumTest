@@ -4,20 +4,21 @@ import time
 
 driver = webdriver.Chrome(executable_path="C:\Drivers\operadriver.exe")
 def wait():
-    time.sleep(13)
+    time.sleep(7)
 
 #open main page
 driver.get("https://www.spbrealty.ru/")
 wait()
 
-#goes to about company
-driver.find_element_by_xpath('//*[@id="emerge-header"]/div[3]/div/div/div[1]/ul/li[4]/a').click()
-wait()
+element = driver.find_element_by_name("NewObjectMailing[email]")
+if element.is_displayed() == True:
+    print("Element is displayed")
+else:
+    print("Element is not displayed")
 
-driver.back()
-wait()
+if element.is_enabled() == True:
+    print("Element is enabled")
+else:
+    print("Element is not enabled")
 
-driver.forward()
-wait()
-
-driver.quit()
+element.send_keys("test@test.ru")
