@@ -18,6 +18,8 @@ if milkradio.is_selected() == True:
 else:
     print("milk radio is not selected")
 
+driver.quit()
+
 #result
 #butter radio is selected
 #milk radio is not selected

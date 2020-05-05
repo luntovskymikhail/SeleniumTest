@@ -14,7 +14,7 @@ if driveredge.title == name:
     print("Pass - Заголовок Edge")
 else:
     print("Fail - Заголовок Edge")
-driveredge.close()
+driveredge.quit()
 
 #chrome
 driverchrome.get("https://yandex.ru/")
@@ -23,7 +23,7 @@ if driverchrome.title == name:
     print("Pass - Заголовок Chrome")
 else:
     print("Fail - Заголовок Chrome")
-driverchrome.close()
+driverchrome.quit()
 
 #firefox
 driverfirefox.get("https://yandex.ru/")
@@ -32,7 +32,7 @@ if driverfirefox.title == name:
     print("Pass - Заголовок Firefox")
 else:
     print("Fail - Заголовок Firefox")
-driverfirefox.close()
+driverfirefox.quit()
 
 #internet explorer
 driverie.get("https://yandex.ru/")
@@ -41,7 +41,7 @@ if driverie.title == name:
     print("Pass - Заголовок IE")
 else:
     print("Fail - Заголовок IE")
-driverie.close()
+driverie.quit()
 
 #opera
 driveropera.get("https://yandex.ru/")
@@ -50,4 +50,4 @@ if driveropera.title == name:
     print("Pass - Заголовок Opera")
 else:
     print("Fail - Заголовок Opera")
-driveropera.close()
+driveropera.quit()
