@@ -15,3 +15,10 @@ for r in range (1, rows + 1):
     for c in range (1, columns + 1):
         print(sheet.cell(row=r, column=c).value, end= "     ")
     print()
+
+#result
+#ID     FirstName     LastName     Salary
+#1     Bono     Voice     100000
+#2     Edge     Guitar     200000
+#3     Adam     Bass     300000
+#4     Larry     Drum     400000
